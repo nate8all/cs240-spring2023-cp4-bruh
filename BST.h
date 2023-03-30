@@ -7,6 +7,8 @@ class BST {
         BST();
         BST(int);
         BST* insert(BST*, int);
+        remove();
+        find();
         
     private:
         int data;
