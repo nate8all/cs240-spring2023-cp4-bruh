@@ -13,7 +13,7 @@ BST::BST(int value) {
     right = nullptr;
 }
 
-BST::insert(BST* root, int key) {
+BST* BST::insert(BST* root, int key) {
     if(root == nullptr) {
         return new BST(key);
     }
