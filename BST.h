@@ -8,8 +8,10 @@ class BST {
         BST(int);
         BST* insert(BST*, int);
         BST* remove(BST*, int);
-        find();
-        BSTGetHeight();
+        //find();
+        int countNodes(BST*);
+        int BSTGetHeight(BST*);
+        int avgDepth(BST*);
         
     private:
         int data;

@@ -73,3 +73,26 @@ BST* BST::remove(BST* root, int key) {
         return root;
     }
 }
+
+BST::int countNodes(BST* root){
+    int count = 0;
+    if(root!=nullptr){
+        countNodes(root->left);
+        count++;
+        countNodes(root->right);
+    }
+    return count;
+}
+
+BST::int BSTGetHeight(BST* root){
+    int leftHeight = 0;
+    int rightHeight = 0;
+    if(root == nullptr){
+        return 0;
+    }
+    else {
+        leftHeight = BSTGetHeight(root->left);
+        rightHeight = BSTGetHeight(root->right);
+    }
+    return 1 + max(leftHeight, rightHeight);
+}
