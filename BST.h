@@ -9,6 +9,7 @@ class BST {
         BST* insert(BST*, int);
         remove();
         find();
+        BSTGetHeight();
         
     private:
         int data;
