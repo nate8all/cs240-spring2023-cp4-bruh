@@ -12,3 +12,7 @@ BST::BST(int value) {
     left = nullptr;
     right = nullptr;
 }
+
+BST::BSTGetHeight(){
+    
+}
