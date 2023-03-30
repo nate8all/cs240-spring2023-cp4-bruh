@@ -12,3 +12,21 @@ BST::BST(int value) {
     left = nullptr;
     right = nullptr;
 }
+
+BST* BST::insert(BST* root, int key) {
+    if(root == nullptr) {
+        return new BST(key);
+    }
+
+    if(key < root->data) {
+        root->left = insert(root->right, key);
+    }
+    else if(key == root->data) {
+        return root;
+    }
+    else {
+        root->right = insert(root->right, key);
+    }
+
+    return root;
+}
