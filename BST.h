@@ -7,7 +7,7 @@ class BST {
         BST();
         BST(int);
         BST* insert(BST*, int);
-        remove();
+        BST* remove(BST*, int);
         find();
         BSTGetHeight();
         
