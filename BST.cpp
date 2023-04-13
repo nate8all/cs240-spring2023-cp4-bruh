@@ -111,13 +111,19 @@ int BST::BSTGetHeight(BST* root){
     return 1 + max(leftHeight, rightHeight);
 }
 
+// Assignment 8.1
+void BST::reset(BST* root) {
+    root->countComparisons = 0;
+    // reset comparison counter
+}
+
 // Assignment 8.2
 int BST::getCount(BST* root){
-    int count = 0;
+    reset(root);
     if(root!=nullptr){
         getCount(root->left);
-        count++;
+        countComparisons++;
         getCount(root->right);
     }
-    return count;
+    return countComparisons;
 }

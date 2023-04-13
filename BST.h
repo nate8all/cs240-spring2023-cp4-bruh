@@ -13,7 +13,7 @@ class BST {
         void shake(int S, int R);
         int avgDepth(BST* root);
         int BSTGetHeight(BST* root);
-        void reset();
+        void reset(BST* root);
         int getCount(BST* root);
         // additional functions below
         
@@ -21,4 +21,5 @@ class BST {
         int data;
         BST *left;
         BST *right;
+        int countComparisons;
 };
