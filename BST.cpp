@@ -14,7 +14,9 @@ BST::BST(int value) {
 }
 
 // Assignment 1 (find)
-BST
+BST* BST::find(BST* root, int key){
+
+}
 
 // Assignment 2
 BST* BST::insert(BST* root, int key) {
