@@ -15,7 +15,18 @@ BST::BST(int value) {
 
 // Assignment 1 (find)
 BST* BST::find(BST* root, int key){
+    if(root == nullptr) {
+        return nullptr;
+    }
+    int diff = root->data - key;
 
+    if(diff == 0) {
+        return root;
+    }
+    if(diff > 0) {
+        return find(root->left, key);
+    }
+    return find(root->right, key);
 }
 
 // Assignment 2
@@ -104,9 +115,9 @@ int BST::BSTGetHeight(BST* root){
 int BST::getCount(BST* root){
     int count = 0;
     if(root!=nullptr){
-        countNodes(root->left);
+        getCount(root->left);
         count++;
-        countNodes(root->right);
+        getCount(root->right);
     }
     return count;
 }
