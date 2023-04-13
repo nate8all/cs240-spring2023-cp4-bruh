@@ -74,7 +74,7 @@ BST* BST::remove(BST* root, int key) {
     }
 }
 
-BST::int countNodes(BST* root){
+BST::int getCount(BST* root){
     int count = 0;
     if(root!=nullptr){
         countNodes(root->left);
