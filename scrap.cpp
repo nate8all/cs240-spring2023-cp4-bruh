@@ -6,12 +6,18 @@ using namespace std;
 int avgDepth(BST* node){
     int avgDepth = 0;
     int depthSum = 0;
-    int leftDepth = 0;
-    int rightDepth = 0;
-    if(node != nullptr){
-        leftDepth += avgDepth
+    int leftDepth = BSTGetHeight(root->left);
+    int rightDepth = BSTGetHeight(root->right);
+    if(node == nullptr){
+        return 0;
+    }
+    else{
+        depthSum = leftDepth + rightDepth;
+        //divide depthSum by # of nodes ?
     }
 }
+
+
 
 // Assignment 7
 int BSTGetHeight(BST* node) {
