@@ -102,6 +102,18 @@ BST* BST::remove(BST* root, int key) {
     }
 }
 
+// Assignment 4
+void BST::shuffle(int S){
+    for(int i = 0; i < S; i++) {
+        // shuffle values in a vector by performing random swaps of two elements
+    }
+}
+
+// Assignment 5
+void BST::shake(int S, int R) {
+
+}
+
 // Assignment 6
 int BST::avgDepth(BST* root){
     return 0;
@@ -124,7 +136,6 @@ int BST::BSTGetHeight(BST* root){
 // Assignment 8.1
 void BST::reset(BST* root) {
     root->countComparisons = 0;
-    // reset comparison counter
 }
 
 // Assignment 8.2
