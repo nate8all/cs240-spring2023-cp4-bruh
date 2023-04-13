@@ -6,15 +6,15 @@ class BST {
     public:
         BST();
         BST(int);
-        BST* insert(BST*, int);
-        BST* remove(BST*, int);
-        find();
+        BST* find(BST* root, int key);
+        BST* insert(BST* root, int key);
+        BST* remove(BST* root, int key);
         shuffle();
         shake();
-        int avgDepth(BST* node);
-        int BSTGetHeight(BST* node);
+        int avgDepth(BST* root);
+        int BSTGetHeight(BST* root);
         reset();
-        int getCount(BST* node);
+        int getCount(BST* root);
         // additional functions below
         
     private:

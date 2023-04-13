@@ -13,6 +13,10 @@ BST::BST(int value) {
     right = nullptr;
 }
 
+// Assignment 1 (find)
+BST
+
+// Assignment 2
 BST* BST::insert(BST* root, int key) {
     if(root == nullptr) {
         return new BST(key);
@@ -31,6 +35,7 @@ BST* BST::insert(BST* root, int key) {
     return root;
 }
 
+// Assignment 3
 BST* BST::remove(BST* root, int key) {
     if(root == nullptr) {
         return root;
@@ -74,17 +79,13 @@ BST* BST::remove(BST* root, int key) {
     }
 }
 
-BST::int getCount(BST* root){
-    int count = 0;
-    if(root!=nullptr){
-        countNodes(root->left);
-        count++;
-        countNodes(root->right);
-    }
-    return count;
+// Assignment 6
+int BST::avgDepth(BST* root){
+    return 0;
 }
 
-BST::int BSTGetHeight(BST* root){
+// Assignment 7
+int BST::BSTGetHeight(BST* root){
     int leftHeight = 0;
     int rightHeight = 0;
     if(root == nullptr){
@@ -95,4 +96,15 @@ BST::int BSTGetHeight(BST* root){
         rightHeight = BSTGetHeight(root->right);
     }
     return 1 + max(leftHeight, rightHeight);
+}
+
+// Assignment 8.2
+int BST::getCount(BST* root){
+    int count = 0;
+    if(root!=nullptr){
+        countNodes(root->left);
+        count++;
+        countNodes(root->right);
+    }
+    return count;
 }
