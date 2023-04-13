@@ -5,12 +5,14 @@ BST::BST() {
     data = 0;
     left = nullptr;
     right = nullptr;
+    countComparisons = 0;
 }
 
 BST::BST(int value) {
     data = value;
     left = nullptr;
     right = nullptr;
+    countComparisons = 0;
 }
 
 // Assignment 1 (find)
@@ -21,14 +23,14 @@ BST* BST::find(BST* root, int key){
     int diff = root->data - key;
 
     if(diff == 0) {
-        root->countComparisons++;
+        countComparisons++;
         return root;
     }
     if(diff > 0) {
-        root->countComparisons++;
+        countComparisons++;
         return find(root->left, key);
     }
-    root->countComparisons++;
+    countComparisons++;
     return find(root->right, key);
 }
 
@@ -39,15 +41,15 @@ BST* BST::insert(BST* root, int key) {
     }
 
     if(key < root->data) {
-        root->countComparisons++;
+        countComparisons++;
         root->left = insert(root->right, key);
     }
     else if(key == root->data) {
-        root->countComparisons++;
+        countComparisons++;
         return root;
     }
     else {
-        root->countComparisons++;
+        countComparisons++;
         root->right = insert(root->right, key);
     }
 
@@ -61,12 +63,12 @@ BST* BST::remove(BST* root, int key) {
     }
 
     if(key < root->data) {
-        root->countComparisons++;
+        countComparisons++;
         root->left = remove(root->left, key);
         return root;
     }
     else if(key > root->data) {
-        root->countComparisons++;
+        countComparisons++;
         root->right = remove(root->right, key);
         return root;
     }
